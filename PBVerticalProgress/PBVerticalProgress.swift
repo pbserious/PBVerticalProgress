@@ -34,6 +34,11 @@ import UIKit
             updateSlider()
         }
     }
+    @IBInspectable var progressTrackColor:UIColor = UIColor.darkGray {
+        didSet {
+            updateSlider()
+        }
+    }
     @IBInspectable var textColor:UIColor = UIColor.white {
         didSet {
             updateLabel()
@@ -100,7 +105,7 @@ import UIKit
                                 height: trackRect.size.height*CGFloat(progressValue))
         progress.backgroundColor = progressTintColor
         progressTrack.frame = trackRect
-        progressTrack.backgroundColor = UIColor.darkGray
+        progressTrack.backgroundColor = progressTrackColor
         progress.layer.cornerRadius = progressWidth / 2.0
         progressTrack.layer.cornerRadius = progressWidth / 2.0
         addSubview(progressTrack)

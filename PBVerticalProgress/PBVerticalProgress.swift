@@ -60,6 +60,11 @@ import UIKit
         setupView()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupView()
+    }
+    
     func setupView() {
         updateImageView()
         updateProgress()
